@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo-spring-boot
+  # DATASOURCE CONFIGURATION
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/demo_spring_db?createDatabaseIfNotExist=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
